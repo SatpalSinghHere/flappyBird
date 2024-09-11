@@ -1,0 +1,72 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: slateblue;
+}
+body canvas {
+  border: 1px solid black;
+  background-image: url(../flappy\ bird\ bg.png);
+  background-size: 200% 100%;
+}
+body .container {
+  display: flex;
+  width: 500px;
+  margin: 10px;
+  justify-content: space-between;
+}
+body #popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 40%;
+  height: 25%;
+  border-radius: 15px;
+  background-color: pink;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 3;
+  transition: all 200ms ease-out;
+}
+body #popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+body #popup #close {
+  position: absolute;
+  top: 0px;
+  right: 7px;
+  background-color: inherit;
+  font-size: 40px;
+  transition: all 200ms ease-in-out;
+  border: 0;
+  border-radius: 50%;
+}
+body #popup #close:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+body #overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: all 200ms ease-in-out;
+}
+body .active#overlay {
+  opacity: 1;
+  pointer-events: all;
+}/*# sourceMappingURL=flappybird.css.map */
