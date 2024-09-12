@@ -19,6 +19,9 @@ body .container {
   margin: 10px;
   justify-content: space-between;
 }
+body .container #restart:hover {
+  cursor: pointer;
+}
 body #popup {
   position: fixed;
   top: 50%;

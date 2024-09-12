@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(function () {
         if (start == true) {
             let lowerPipeY = randomIntFromRange(150, 500);
-            let upperPipeY = randomIntFromRange(lowerPipeY - 250, lowerPipeY - 200);
+            let upperPipeY = randomIntFromRange(lowerPipeY - 200, lowerPipeY - 150);
             lowerPipeArray.push(new lowerPipeObj(lowerPipeImage, 500, lowerPipeY, 100, 600));
             upperPipeArray.push(new upperPipeObj(upperPipeImage, 500, upperPipeY - 600, 100, 600));
             console.log(lowerPipeArray, upperPipeArray);
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 this.x -= this.dx;
             }
 
-            if(this.x == 165){
+            if (this.x == 165) {
                 score++;
                 document.querySelector("#score").innerHTML = score;
             }
@@ -147,16 +147,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let gameOver = false
     // spacebar
     document.addEventListener('keydown', function (event) {
-        
-        if(event.keyCode === 32){
-            if (!start && !gameOver) { 
-                start = true;               
+
+        if (event.keyCode === 32) {
+            if (!start && !gameOver) {
+                start = true;
                 bird1.dy = -10;
-                animate();                
+                animate();
             }
-            else if(start && !gameOver){
+            else if (start && !gameOver) {
                 bird1.dy = -10;
-                
+
             }
         }
 
@@ -170,6 +170,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (start == true) {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, innerWidth, innerHeight);
+            // c.font = "30px Arial";
+            // c.textAlign = "center";
+            // c.fillText("Enter space to Start", canvas.width / 2, canvas.height / 2);
             bird1.fall();
             for (let i = 0; i < lowerPipeArray.length; i++) {
                 lowerPipeArray[i].move();
@@ -219,8 +222,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     close.onclick = function () { closepopup(); }
 
-    
-    document.querySelector("#restart").onclick = function restart(){
+
+    document.querySelector("#restart").onclick = function restart() {
         c.clearRect(0, 0, innerWidth, innerHeight);
         c.font = "30px Arial";
         c.textAlign = "center";
@@ -232,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bird1.y = 200;
         bird1.dy = 0;
         gameOver = false;
-        
+
     }
-    
+
 })
