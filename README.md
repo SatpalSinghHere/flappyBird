@@ -1,1 +1,2 @@
-<img width="374" alt="flappy bird" src="https://github.com/user-attachments/assets/49f6ee89-166e-47bd-a7fd-0ebfc3b48d5e">
+
+<img width="891" alt="flappy bird" src="https://github.com/user-attachments/assets/c0600a2e-0a56-4c6a-bd9a-a55581eafb7f">
