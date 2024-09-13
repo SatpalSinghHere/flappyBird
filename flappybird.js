@@ -156,12 +156,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             else if (start && !gameOver) {
                 bird1.dy = -10;
-
             }
         }
 
         if (event.keyCode === 13) {
             start = false;
+        }
+    })
+    document.addEventListener('click', function (event) {
+
+        if (!start && !gameOver) {
+            start = true;
+            bird1.dy = -10;
+            animate();
+        } else if (start && !gameOver) {
+            bird1.dy = -10;
         }
     })
 
